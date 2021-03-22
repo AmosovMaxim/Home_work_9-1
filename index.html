@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <!-- <style>
+      .section{
+          color: azure;
+      }
+  </style> -->
+</head>
+<body>
+ 
+    <article>
+        <p>Alphabet</p>
+        <section class="s1">    
+                <p class="s2"> A B C D E F G </p>
+                <p>come on out and play with me.</p>
+                <p class="s2">H I J </p>
+                <p>come and play.</p> 
+                <p class="s2">K L M </p>
+                <p>come with them. </p>
+                <p class="s2">N O P </p>
+                <p>near the tree. </p>
+                <p class="s2">Q R S T U V </p>
+                <p>Oh, how happy we will be. </p>
+                <p class="s2">W X Y Z </p>
+                <p >Lot's of fun for you and me. </p>
+        </section>
+         
+</article>    
+<div id="butt1">
+  <button onclick='put()'>Нажми Меня</button>
+</div>
+
+<p class="result">
+    <span>Результат:</span>
+    <span class="result_value"></span>
+</p>
+
+<script>
+
+
+    function put() {
+    
+        section = document.querySelector('section')
+        els = section.querySelectorAll('p');
+        for (i=0; i<els.length; i++){
+        els[i].style.cssText =`border: 1px solid green;
+            font-weight: 800;
+            font-size: 14px;
+            background-color: azure;
+            color: red;
+        `;
+        }
+
+        els2 = section.querySelectorAll('.s2');
+        s = "";
+        for (i=0; i<els2.length; i++){
+            s +=els2[i].innerHTML;
+        }
+        console.log(s);
+
+        document.querySelector('.result_value').innerHTML = s;
+
+    }
+        
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
